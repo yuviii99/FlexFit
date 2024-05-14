@@ -20,7 +20,7 @@ const ExerciseVideos = (props) => {
       >
         {exerciseVideos?.slice(0, 3).map((item, index) => (
             <Stack>
-            <iframe src={`https://www.youtube.com/embed/${item.video.videoId}`} width='375px' height='275px'/>
+            <iframe title={item.video.title} src={`https://www.youtube.com/embed/${item.video.videoId}`} width='375px' height='275px'/>
             <Box>
                 <Typography variant='h5' color='#000'>
                     {item.video.title}
