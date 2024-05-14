@@ -16,10 +16,10 @@ const ExerciseVideos = (props) => {
         justifyContent="flex-start"
         flexWrap="wrap"
         alignItems="center"
-        sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0" } }}
+        sx={{ flexDirection: { lg: "row" }, gap: { lg: "80px", xs: "0" } }}
       >
         {exerciseVideos?.slice(0, 3).map((item, index) => (
-            <>
+            <Stack>
             <iframe src={`https://www.youtube.com/embed/${item.video.videoId}`} width='375px' height='275px'/>
             <Box>
                 <Typography variant='h5' color='#000'>
@@ -29,7 +29,7 @@ const ExerciseVideos = (props) => {
                     {item.video.channelName}
                 </Typography>
             </Box>
-            </>
+            </Stack>
         ))}
       </Stack>
     </Box>
